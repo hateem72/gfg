@@ -10,9 +10,9 @@ JWT_KEY= "YFWEYWEGU"
 
 FOR FRONTEND 
 
-VITE_API_KEY = "AIzUsuelfEeFMDPA2"
-VITE_UPLOAD_LINK= "https://api.cloudinary.com/v1_1/FHWIWOEIFO/image/upload"
-VITE_UPLOAD_VIDEO_LINK="https://api.cloudinary.com/v1_1/IWHWOIEFHWOE/video/upload"
+VITE_API_KEY = "AIzUsuelbebekfEeFMDPA2"
+VITE_UPLOAD_LINK= "https://api.cloudinary.com/v1_1/FHWIWnjnejOEIFO/image/upload"
+VITE_UPLOAD_VIDEO_LINK="https://api.cloudinary.com/v1_1/IjebjeWHWOIEFHWOE/video/upload"
 
 
 

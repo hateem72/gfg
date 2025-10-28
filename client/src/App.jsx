@@ -1,46 +1,79 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import Lenis from 'lenis';
 
-import {
-  QueryClient,
-  QueryClientProvider,
-} from "@tanstack/react-query";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fas } from "@fortawesome/free-solid-svg-icons";
-library.add(fas);
+// Components
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
-// import 'index.css';
+// Pages
+import Home from './pages/Home';
+import About from './pages/About';
+import Team from './pages/Team';
+import Events from './pages/Events';
+import Gallery from './pages/Gallery';
+import Contact from './pages/Contact';
+import Resources from './pages/Resources';
+import Community from './pages/Community';
+import Achievements from './pages/Achievements';
 
-const App = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false); // Initialize to false
+// Styles
+import './App.css';
 
+function App() {
   useEffect(() => {
-    const currentUser = localStorage.getItem("currentUser ");
-    if (currentUser) {
-      setIsAuthenticated(true);
-    } else{
-      setIsAuthenticated(false); // Set to false if no user is found
-    }
-  }, [isAuthenticated]);
+    // Initialize Lenis for smooth scrolling
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      direction: 'vertical',
+      gestureDirection: 'vertical',
+      smooth: true,
+      mouseMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+    });
 
-  const queryClient = new QueryClient();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
   return (
     <Router>
-      <div className="min-h-screen flex flex-col">
-        <Navbar/>
-        <div className="flex-grow pt-20"> 
+      <div className="App bg-white min-h-screen">
+        <Navbar />
+        <ScrollToTop />
+        
+        <AnimatePresence mode="wait">
           <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/register" element={<Register />} />
-           
-            
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="/achievements" element={<Achievements />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/community" element={<Community />} />
+
           </Routes>
-        </div>
-        {/* <Footer />  */}
+        </AnimatePresence>
+        
+        <Footer />
       </div>
     </Router>
   );
-};
+}
 
 export default App;

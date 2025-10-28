@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaWhatsapp, FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 import { Heart } from 'lucide-react';
+import ImageLoader from './ImageLoader';
 
 const Footer = () => {
   // Navigation links from navbar
@@ -52,10 +53,12 @@ const Footer = () => {
           {/* Brand Section */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <img 
+              <ImageLoader 
                 src="/gfg.svg" 
                 alt="GeeksForGeeks" 
                 className="h-10 w-auto"
+                containerClassName="h-10"
+                loaderType="spin"
               />
               <div>
                 <h3 className="text-xl font-space-grotesk font-bold text-gfg-green">

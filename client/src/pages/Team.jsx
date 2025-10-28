@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ImageLoader from '../components/ImageLoader';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -206,10 +207,12 @@ const TeamPage = () => {
 
                     {/* Inner Image Container */}
                     <div className="relative w-80 h-96 bg-white rounded-2xl overflow-hidden border-8 border-white shadow-2xl transform group-hover:scale-105 group-hover:rotate-2 transition-all duration-700">
-                      <img
+                      <ImageLoader
                         src={teamData.president.image}
                         alt={teamData.president.name}
                         className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000"
+                        containerClassName="w-full h-full"
+                        loaderType="pulse"
                       />
 
                       {/* Shine Overlay Effect */}
@@ -402,10 +405,12 @@ const TeamPage = () => {
 
                           {/* Main Image */}
                           <div className="w-40 h-52 relative overflow-hidden rounded-xl border-4 border-white shadow-2xl bg-white">
-                            <img
+                            <ImageLoader
                               src={member.image}
                               alt={member.name}
                               className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                              containerClassName="w-full h-full"
+                              loaderType="dots"
                             />
                             {/* Shine Overlay */}
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>

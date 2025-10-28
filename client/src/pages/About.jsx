@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ImageLoader from '../components/ImageLoader';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -338,10 +339,12 @@ const AboutPage = () => {
 
                       {/* Main Image Container - 4:5 Ratio */}
                       <div className="relative w-full h-80 bg-gfg-light-gray rounded-2xl overflow-hidden border-4 border-white shadow-2xl transform group-hover:scale-105 group-hover:rotate-1 transition-all duration-700">
-                        <img
+                        <ImageLoader
                           src={mentor.image}
                           alt={mentor.name}
                           className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000"
+                          containerClassName="w-full h-full"
+                          loaderType="spin"
                         />
 
                         {/* Shine Overlay Effect */}

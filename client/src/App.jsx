@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import Lenis from 'lenis';
 
 // Components
@@ -66,7 +66,6 @@ function App() {
             <Route path="/achievements" element={<Achievements />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/community" element={<Community />} />
-
           </Routes>
         </AnimatePresence>
         

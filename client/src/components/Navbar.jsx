@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Home, Info, Users, Calendar, Trophy, Mail, Sparkles, ArrowRight } from 'lucide-react';
+import ImageLoader from './ImageLoader';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -74,10 +75,12 @@ const Navbar = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <img
+              <ImageLoader
                 src="/gfg.svg"
                 alt="GFG Logo"
                 className="h-12 w-auto"
+                containerClassName="h-12"
+                loaderType="simple"
               />
               {/* Glossy shine effect */}
               <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -skew-x-12" />

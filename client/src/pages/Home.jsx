@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Sparkles, Users2, ArrowRight } from 'lucide-react';
 import Tilt from 'react-parallax-tilt';
+import ImageLoader from '../components/ImageLoader';
 
 // Register GSAP
 if (typeof window !== 'undefined') {
@@ -232,10 +233,12 @@ const LandingPage = () => {
               ref={logoRef}
               className="transition-transform duration-500 transform hover:scale-105 flex justify-center"
             >
-              <img
+              <ImageLoader
                 src="/gfg.svg"
                 alt="GeeksForGeeks"
                 className="h-28 mt-8 md:h-36 lg:h-44 w-auto drop-shadow-2xl mx-auto"
+                containerClassName="flex justify-center"
+                loaderType="pulse"
               />
             </div>
           </div>
@@ -373,10 +376,12 @@ const LandingPage = () => {
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     {/* Big Image */}
-                    <img
+                    <ImageLoader
                       src={goodie.image}
                       alt={goodie.name}
                       className="w-full h-full object-contain p-8 transform group-hover:scale-110 transition-transform duration-700"
+                      containerClassName="w-full h-full"
+                      loaderType="dots"
                     />
 
                     {/* Shine Effect */}

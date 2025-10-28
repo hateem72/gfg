@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Image, Play, Calendar, Users } from 'lucide-react';
+import ImageLoader from '../components/ImageLoader';
 
 const Gallery = () => {
   const galleryItems = [
@@ -43,8 +44,14 @@ const Gallery = () => {
                 className="group cursor-pointer"
               >
                 <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-gfg-green/20 overflow-hidden">
-                  <div className="h-48 bg-gradient-to-br from-gfg-green/20 to-gfg-dark-green/20 flex items-center justify-center relative">
-                    <Image className="text-gfg-green" size={48} />
+                  <div className="h-48 bg-gradient-to-br from-gfg-green/20 to-gfg-dark-green/20 flex items-center justify-center relative overflow-hidden">
+                    <ImageLoader
+                      src={`https://picsum.photos/400/300?random=${item.id}`}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                      containerClassName="w-full h-full"
+                      loaderType={item.id % 4 === 0 ? "pulse" : item.id % 3 === 0 ? "dots" : item.id % 2 === 0 ? "spin" : "simple"}
+                    />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
                       <Play className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" size={32} />
                     </div>

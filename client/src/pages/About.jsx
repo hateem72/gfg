@@ -109,7 +109,7 @@ const AboutPage = () => {
   // Mentors data
   const mentorsData = [
     {
-      name: "Prof. Sudhir Choudary",
+      name: "Prof. (Dr.) Sudhir Kumar Singh",
       position: "Supported By",
       image: "/sudhir.png",
       department: "Head of Department - CSE",

@@ -145,10 +145,10 @@ const LandingPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden font-sans">
+    <div className="bg-white overflow-x-hidden font-sans">
 
 
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center overflow-hidden">
+      <section className="relative py-20 flex flex-col items-center justify-center px-6 text-center overflow-hidden">
         {/* Creative Grid Background */}
         <div className="absolute inset-0 pointer-events-none">
           {/* Main Grid Pattern */}
@@ -236,7 +236,7 @@ const LandingPage = () => {
               <ImageLoader
                 src="/gfg.svg"
                 alt="GeeksForGeeks"
-                className="h-28 mt-8 md:h-36 lg:h-44 w-auto drop-shadow-2xl mx-auto"
+                className="h-28  md:h-36 mt-24 lg:h-44 w-auto drop-shadow-2xl mx-auto"
                 containerClassName="flex justify-center"
                 loaderType="pulse"
               />
@@ -263,23 +263,27 @@ const LandingPage = () => {
               ref={ctaGroupRef}
               className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             >
-              <button className="group relative bg-gfg-black text-white px-10 py-5 rounded-2xl font-poppins font-semibold text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden border-2 border-gfg-black transform hover:scale-105">
-                <span className="relative z-10 flex items-center gap-3">
-                  <span className="text-xl">🚀</span>
-                  Join the Community
-                  <span className="text-xl transform group-hover:rotate-45 transition-transform duration-300">⚡</span>
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-gfg-green to-gfg-green opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </button>
+              <Link to="/community">
+                <button className="group relative bg-gfg-black text-white px-10 py-5 rounded-2xl font-poppins font-semibold text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden border-2 border-gfg-black transform hover:scale-105">
+                  <span className="relative z-10 flex items-center gap-3">
+                    <span className="text-xl">🚀</span>
+                    Join the Community
+                    <span className="text-xl transform group-hover:rotate-45 transition-transform duration-300">⚡</span>
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-gfg-green to-gfg-green opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </button>
+              </Link>
 
-              <button className="group relative bg-transparent text-gfg-dark-green px-10 py-5 rounded-2xl font-poppins font-semibold text-lg border-2 border-gfg-dark-green hover:bg-gfg-dark-green hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl overflow-hidden">
-                <span className="relative z-10 flex items-center gap-3">
-                  <span className="text-xl">📅</span>
-                  Upcoming Events
-                  <span className="text-xl transform group-hover:translate-x-1 transition-transform duration-300">🎯</span>
-                </span>
-                <div className="absolute inset-0 bg-gfg-dark-green opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </button>
+              <Link to="/events">
+                <button className="group relative bg-transparent text-gfg-dark-green px-10 py-5 rounded-2xl font-poppins font-semibold text-lg border-2 border-gfg-dark-green hover:bg-gfg-dark-green hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl overflow-hidden">
+                  <span className="relative z-10 flex items-center gap-3">
+                    <span className="text-xl">📅</span>
+                    Upcoming Events
+                    <span className="text-xl transform group-hover:translate-x-1 transition-transform duration-300">🎯</span>
+                  </span>
+                  <div className="absolute inset-0 bg-gfg-dark-green opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -692,7 +696,6 @@ const LandingPage = () => {
             <span className="text-gfg-green">Build</span>{' '}
             Your <span className="text-gfg-blue">Legacy</span>?
           </motion.h2>
-
           {/* Enhanced Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -701,9 +704,8 @@ const LandingPage = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-2xl font-space-grotesk text-gfg-gray mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            Join <span className="text-gfg-green font-semibold">500+ innovators</span> who code, compete, and conquer the future of technology.
+            Join <Link to="/community" className="text-gfg-green font-semibold hover:underline">500+ innovators</Link> who code, compete, and conquer the future of technology.
           </motion.p>
-
           {/* Enhanced CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -715,6 +717,21 @@ const LandingPage = () => {
             {/* Primary CTA */}
             
 
+            {/* Primary CTA - Join Community */}
+            <Link to="/community">
+              <motion.button
+                whileHover={{ scale: 1.05, backgroundColor: "#0F9D58", color: "white" }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gfg-green text-white px-12 py-5 rounded-2xl font-space-grotesk font-bold text-xl hover:bg-gfg-dark-green transition-all duration-300 relative overflow-hidden group shadow-lg"
+              >
+                <span className="relative z-10 flex items-center space-x-3">
+                  <Users2 size={24} />
+                  <span>Join The Community</span>
+                  <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                </span>
+              </motion.button>
+            </Link>
+
             {/* Secondary CTA - Meet the Team */}
             <Link to="/team">
               <motion.button
@@ -724,7 +741,7 @@ const LandingPage = () => {
               >
                 <span className="relative z-10 flex items-center space-x-3">
                   <Users2 size={24} />
-                  <span>Join The Community</span>
+                  <span>Meet The Team</span>
                   <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                 </span>
               </motion.button>

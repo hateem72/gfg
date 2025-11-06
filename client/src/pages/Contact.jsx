@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, Users, Zap, Sparkles, ArrowRight, Shield, Award, HelpCircle, Code, Lightbulb, Calendar, UserPlus, Trophy } from 'lucide-react';
 import { FaWhatsapp, FaLinkedin, FaInstagram } from 'react-icons/fa';
@@ -148,7 +149,7 @@ const Connect = () => {
     {
       icon: Phone,
       title: 'Call Us',
-      details: '+91 92503 24091',
+      details: '+91 9250324091',
       subtitle: 'Outreach Head',
       color: 'bg-gfg-blue',
       delay: 0.2
@@ -296,27 +297,27 @@ const Connect = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-br from-gfg-light-gray to-white">
+      <section className="relative py-16 sm:py-20 md:py-24 bg-gradient-to-br from-gfg-light-gray to-white">
         <div className="absolute inset-0 overflow-hidden opacity-30">
           {/* Subtle geometric patterns */}
-          <div className="absolute top-20 left-10 w-32 h-32 border-2 border-gfg-green/20 rounded-full"></div>
-          <div className="absolute bottom-20 right-10 w-24 h-24 border-2 border-gfg-blue/20 rotate-45"></div>
-          <div className="absolute top-1/2 left-1/4 w-16 h-16 border-2 border-gfg-yellow/20 rounded-full"></div>
+          <div className="absolute top-10 sm:top-20 left-4 sm:left-10 w-16 sm:w-24 md:w-32 h-16 sm:h-24 md:h-32 border-2 border-gfg-green/20 rounded-full"></div>
+          <div className="absolute bottom-10 sm:bottom-20 right-4 sm:right-10 w-12 sm:w-16 md:w-24 h-12 sm:h-16 md:h-24 border-2 border-gfg-blue/20 rotate-45"></div>
+          <div className="absolute top-1/2 left-1/4 w-8 sm:w-12 md:w-16 h-8 sm:h-12 md:h-16 border-2 border-gfg-yellow/20 rounded-full"></div>
         </div>
 
-        <div className="container mx-auto px-6 text-center relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
           <div ref={heroRef}>
-            <div className="inline-flex items-center space-x-2 mb-6 px-4 py-2 rounded-full bg-gfg-green/10 border border-gfg-green/20">
-              <Sparkles size={16} className="text-gfg-green" />
-              <span className="text-gfg-green font-mono text-sm">GET IN TOUCH</span>
+            <div className="inline-flex items-center space-x-2 mb-4 sm:mb-6 px-3 sm:px-4 py-2 rounded-full bg-gfg-green/10 border border-gfg-green/20">
+              <Sparkles size={14} className="text-gfg-green sm:w-4 sm:h-4" />
+              <span className="text-gfg-green font-mono text-xs sm:text-sm">GET IN TOUCH</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-anton font-black mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-anton font-black mb-4 sm:mb-6">
               <span className="text-gfg-black">LET'S</span>{' '}
               <span className="text-gfg-green">CONNECT</span>
             </h1>
 
-            <p className="text-2xl text-gfg-gray max-w-3xl mx-auto mb-8 font-inter leading-relaxed text-reveal">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gfg-gray max-w-3xl mx-auto mb-6 sm:mb-8 font-inter leading-relaxed text-reveal px-4">
               Ready to start your tech journey? We're here to help you every step of the way.
               Reach out and let's build something amazing together.
             </p>
@@ -325,23 +326,23 @@ const Connect = () => {
       </section>
 
       {/* Stats Section */}
-      <section ref={statsRef} className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <div ref={addToRefs} className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+      <section ref={statsRef} className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div ref={addToRefs} className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               return (
                 <div
                   key={stat.label}
-                  className="text-center p-6 text-reveal"
+                  className="text-center p-3 sm:p-4 lg:p-6 text-reveal"
                 >
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gfg-green/10 mb-4">
-                    <Icon size={28} className="text-gfg-green" />
+                  <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-2xl bg-gfg-green/10 mb-3 sm:mb-4">
+                    <Icon size={20} className="text-gfg-green sm:w-6 sm:h-6 lg:w-7 lg:h-7" />
                   </div>
-                  <div className="text-3xl font-bold text-gfg-black mb-2 font-montserrat">
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gfg-black mb-1 sm:mb-2 font-montserrat">
                     {stat.number}
                   </div>
-                  <div className="text-gfg-gray font-inter">{stat.label}</div>
+                  <div className="text-sm sm:text-base text-gfg-gray font-inter">{stat.label}</div>
                 </div>
               );
             })}
@@ -350,36 +351,36 @@ const Connect = () => {
       </section>
 
       {/* Contact Information */}
-      <section ref={contactInfoRef} className="py-20 bg-gfg-light-gray">
-        <div className="container mx-auto px-6">
+      <section ref={contactInfoRef} className="py-16 sm:py-20 bg-gfg-light-gray">
+        <div className="container mx-auto px-4 sm:px-6">
           <div ref={addToRefs} className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-anton font-black mb-4 sm:mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-anton font-black mb-4 sm:mb-6">
               <span className="text-gfg-black">GET IN</span>{' '}
               <span className="text-gfg-green">TOUCH</span>
             </h2>
-            <p className="text-lg sm:text-xl text-gfg-gray max-w-2xl mx-auto font-inter px-4 text-reveal">
+            <p className="text-base sm:text-lg md:text-xl text-gfg-gray max-w-2xl mx-auto font-inter px-4 text-reveal">
               Multiple ways to connect with our vibrant tech community
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
             {contactInfo.map((item, index) => {
               const Icon = item.icon;
               return (
                 <div
                   key={item.title}
-                  className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-200 text-center group cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-2 contact-card"
+                  className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg border border-gray-200 text-center group cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-2 contact-card"
                 >
-                  <div className={`inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-2xl ${item.color} mb-4 sm:mb-6 text-white group-hover:scale-110 transition-transform duration-300`}>
-                    <Icon size={24} className="sm:w-7 sm:h-7" />
+                  <div className={`inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-2xl ${item.color} mb-3 sm:mb-4 lg:mb-6 text-white group-hover:scale-110 transition-transform duration-300`}>
+                    <Icon size={18} className="sm:w-6 sm:h-6 lg:w-7 lg:h-7" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gfg-black mb-2 sm:mb-3 font-space-grotesk">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gfg-black mb-2 sm:mb-3 font-space-grotesk">
                     {item.title}
                   </h3>
-                  <p className="text-base sm:text-lg text-gfg-black font-semibold mb-1 sm:mb-2 font-inter break-words">
+                  <p className="text-sm sm:text-base lg:text-lg text-gfg-black font-semibold mb-1 sm:mb-2 font-inter break-words">
                     {item.details}
                   </p>
-                  <p className="text-sm sm:text-base text-gfg-gray font-inter">{item.subtitle}</p>
+                  <p className="text-xs sm:text-sm lg:text-base text-gfg-gray font-inter">{item.subtitle}</p>
                 </div>
               );
             })}
@@ -388,43 +389,43 @@ const Connect = () => {
       </section>
 
       {/* Social Links */}
-      <section ref={socialRef} className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <div ref={addToRefs} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-anton font-black mb-6">
+      <section ref={socialRef} className="py-16 sm:py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div ref={addToRefs} className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-anton font-black mb-4 sm:mb-6">
               <span className="text-gfg-black">JOIN OUR</span>{' '}
               <span className="text-gfg-blue">COMMUNITY</span>
             </h2>
-            <p className="text-xl text-gfg-gray max-w-2xl mx-auto font-inter text-reveal">
+            <p className="text-base sm:text-lg md:text-xl text-gfg-gray max-w-2xl mx-auto font-inter text-reveal px-4">
               Connect with us on social platforms and be part of the conversation
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
             {socialLinks.map((social, index) => {
               const Icon = social.icon;
               return (
                 <a
                   key={social.platform}
                   href={social.link}
-                  className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105 hover:translate-x-2 text-reveal"
+                  className="group bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105 hover:translate-x-2 text-reveal"
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center space-x-4">
-                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${social.color} flex items-center justify-center`}>
-                        <Icon size={24} className="text-white" />
+                  <div className="flex items-center justify-between mb-3 sm:mb-4">
+                    <div className="flex items-center space-x-3 sm:space-x-4 flex-1 min-w-0">
+                      <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-r ${social.color} flex items-center justify-center flex-shrink-0`}>
+                        <Icon size={20} className="text-white sm:w-6 sm:h-6" />
                       </div>
-                      <div className="text-left">
-                        <h3 className="text-lg font-bold text-gfg-black font-space-grotesk">
+                      <div className="text-left min-w-0 flex-1">
+                        <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gfg-black font-space-grotesk truncate">
                           {social.platform}
                         </h3>
-                        <p className="text-gfg-gray font-inter">{social.handle}</p>
+                        <p className="text-xs sm:text-sm text-gfg-gray font-inter truncate">{social.handle}</p>
                       </div>
                     </div>
-                    <ArrowRight size={20} className="text-gfg-gray group-hover:text-gfg-green group-hover:translate-x-2 transition-all duration-300" />
+                    <ArrowRight size={16} className="text-gfg-gray group-hover:text-gfg-green group-hover:translate-x-2 transition-all duration-300 flex-shrink-0 sm:w-5 sm:h-5" />
                   </div>
                   <div className="text-left">
-                    <p className="text-gfg-green font-semibold font-inter">{social.members}</p>
+                    <p className="text-sm sm:text-base text-gfg-green font-semibold font-inter">{social.members}</p>
                   </div>
                 </a>
               );
@@ -433,201 +434,88 @@ const Connect = () => {
         </div>
       </section>
 
-      {/* Enhanced FAQ Section - Mind-Blowing Edition */}
-      <section ref={faqRef} className="py-32 bg-gradient-to-br from-gfg-light-gray via-white to-gfg-light-gray relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-gfg-green/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-80 h-80 bg-gfg-blue/5 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gfg-yellow/3 rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="container mx-auto px-6 max-w-5xl relative z-10">
-          {/* Enhanced Header */}
-          <div ref={addToRefs} className="text-center mb-20">
-           
-
-            <h2 className="text-5xl md:text-7xl font-anton font-black mb-8 bg-gradient-to-r from-gfg-black via-gfg-green to-gfg-black bg-clip-text text-transparent">
-              FREQUENTLY ASKED
+      {/* FAQ Section */}
+      <section ref={faqRef} className="py-16 sm:py-20 bg-gfg-light-gray">
+        <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
+          {/* Header */}
+          <div ref={addToRefs} className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-anton font-black mb-4 text-gfg-black">
+              FREQUENTLY ASKED QUESTIONS
             </h2>
-            <div className="w-32 h-2 bg-gradient-to-r from-gfg-green via-gfg-blue to-gfg-yellow rounded-full mx-auto mb-8"></div>
-            <p className="text-2xl text-gfg-gray font-inter text-reveal max-w-3xl mx-auto leading-relaxed">
-              Everything you need to know about joining our amazing tech community
+            <p className="text-base sm:text-lg text-gfg-gray font-inter max-w-2xl mx-auto">
+              Everything you need to know about joining our tech community
             </p>
           </div>
 
-          {/* Enhanced FAQ Cards */}
-          <div className="space-y-8">
+          {/* FAQ Items */}
+          <div className="space-y-4">
             {faqs.map((faq, index) => {
               const Icon = faq.icon;
               const isActive = activeFaq === index;
 
               return (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.95 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1, duration: 0.6, type: "spring", bounce: 0.3 }}
-                  className={`group relative bg-white rounded-3xl shadow-xl border-2 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 ${isActive ? 'border-gfg-green shadow-gfg-green/20 scale-105' : 'border-gray-200 hover:border-gfg-green/50'
-                    }`}
+                  className="bg-white rounded-xl border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-md"
                 >
-                  {/* Gradient Background Effect */}
-                  <div className={`absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-5 transition-opacity duration-500 ${faq.color === 'gfg-green' ? 'from-green-500 to-emerald-500' :
-                    faq.color === 'gfg-blue' ? 'from-blue-500 to-cyan-500' :
-                      'from-yellow-500 to-orange-500'
-                    }`}></div>
-
-                  {/* Category Badge */}
-                  <div className={`absolute top-6 right-6 px-4 py-2 rounded-full text-xs font-bold tracking-wider ${faq.color === 'gfg-green' ? 'bg-green-100 text-green-700' :
-                    faq.color === 'gfg-blue' ? 'bg-blue-100 text-blue-700' :
-                      'bg-yellow-100 text-yellow-700'
-                    }`}>
-                    {faq.category}
-                  </div>
-
                   <button
                     onClick={() => setActiveFaq(activeFaq === index ? null : index)}
-                    className="w-full p-8 text-left flex items-center justify-between hover:bg-gray-50/50 transition-all duration-300 relative z-10"
+                    className="w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
                   >
-                    <div className="flex items-center space-x-6 flex-1">
-                      {/* Enhanced Icon */}
-                      <motion.div
-                        className={`flex items-center justify-center w-16 h-16 rounded-2xl shadow-lg ${faq.color === 'gfg-green' ? 'bg-gradient-to-br from-green-500 to-emerald-600' :
-                          faq.color === 'gfg-blue' ? 'bg-gradient-to-br from-blue-500 to-cyan-600' :
-                            'bg-gradient-to-br from-yellow-500 to-orange-600'
-                          }`}
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        animate={{
-                          scale: isActive ? 1.1 : 1,
-                          rotate: isActive ? 5 : 0
-                        }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <Icon size={28} className="text-white" />
-                      </motion.div>
-
-                      {/* Enhanced Question */}
-                      <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-gfg-black font-space-grotesk leading-tight group-hover:text-gfg-green transition-colors duration-300">
-                          {faq.question}
-                        </h3>
+                    <div className="flex items-center space-x-4 flex-1">
+                      <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-gfg-green/10 flex-shrink-0">
+                        <Icon size={20} className="text-gfg-green" />
                       </div>
+                      <h3 className="text-sm sm:text-base font-semibold text-gfg-black font-space-grotesk pr-4">
+                        {faq.question}
+                      </h3>
                     </div>
-
-                    {/* Enhanced Arrow */}
-                    <motion.div
-                      animate={{
-                        rotate: isActive ? 90 : 0,
-                        scale: isActive ? 1.2 : 1
-                      }}
-                      transition={{ duration: 0.4, type: "spring", bounce: 0.3 }}
-                      className="flex-shrink-0 ml-4"
-                    >
-                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${isActive ? 'bg-gfg-green shadow-lg' : 'bg-gray-100 group-hover:bg-gfg-green/10'
-                        }`}>
-                        <ArrowRight size={20} className={`transition-colors duration-300 ${isActive ? 'text-white' : 'text-gfg-gray group-hover:text-gfg-green'
-                          }`} />
-                      </div>
-                    </motion.div>
+                    <div className="flex-shrink-0">
+                      <ArrowRight 
+                        size={20} 
+                        className={`text-gfg-gray transition-transform duration-200 ${
+                          isActive ? 'rotate-90 text-gfg-green' : ''
+                        }`} 
+                      />
+                    </div>
                   </button>
 
-                  {/* Enhanced Answer Section */}
-                  <motion.div
-                    initial={false}
-                    animate={{
-                      height: isActive ? 'auto' : 0,
-                      opacity: isActive ? 1 : 0
-                    }}
-                    transition={{ duration: 0.5, ease: "easeInOut" }}
-                    className="overflow-hidden"
-                  >
-                    <motion.div
-                      initial={{ y: -20 }}
-                      animate={{ y: isActive ? 0 : -20 }}
-                      transition={{ duration: 0.3, delay: isActive ? 0.2 : 0 }}
-                      className="px-8 pb-8"
-                    >
-                      <div className={`w-full h-px bg-gradient-to-r mb-6 ${faq.color === 'gfg-green' ? 'from-transparent via-green-300 to-transparent' :
-                        faq.color === 'gfg-blue' ? 'from-transparent via-blue-300 to-transparent' :
-                          'from-transparent via-yellow-300 to-transparent'
-                        }`}></div>
-
-                      <div className="bg-gray-50 rounded-2xl p-6 border-l-4 border-gfg-green">
-                        <p className="text-gfg-gray text-lg leading-relaxed font-inter">
-                          {faq.answer}
-                        </p>
-
-                        {/* Call to Action */}
-                        <motion.div
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: isActive ? 1 : 0, y: isActive ? 0 : 10 }}
-                          transition={{ delay: 0.3 }}
-                          className="mt-6 flex items-center space-x-4"
-                        >
-                         
-                          <span className="text-gfg-gray text-sm">Still have questions? Contact us!</span>
-                        </motion.div>
+                  {/* Answer Section */}
+                  <div className={`overflow-hidden transition-all duration-300 ${
+                    isActive ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}>
+                    <div className="px-4 sm:px-6 pb-4 sm:pb-6">
+                      <div className="pl-14">
+                        <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-gfg-green">
+                          <p className="text-gfg-gray text-sm sm:text-base leading-relaxed font-inter">
+                            {faq.answer}
+                          </p>
+                        </div>
                       </div>
-                    </motion.div>
-                  </motion.div>
-
-                  {/* Hover Glow Effect */}
-                  <div className={`absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none ${faq.color === 'gfg-green' ? 'shadow-2xl shadow-green-500/20' :
-                    faq.color === 'gfg-blue' ? 'shadow-2xl shadow-blue-500/20' :
-                      'shadow-2xl shadow-yellow-500/20'
-                    }`}></div>
-                </motion.div>
+                    </div>
+                  </div>
+                </div>
               );
             })}
           </div>
 
-          {/* Enhanced Bottom CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="mt-20 text-center"
-          >
-            <div className="bg-white rounded-3xl p-12 shadow-2xl border-2 border-gfg-light-gray relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-gfg-green/5 via-gfg-blue/5 to-gfg-yellow/5"></div>
-              <div className="relative z-10">
-                <h3 className="text-3xl font-anton font-black text-gfg-black mb-6">
-                  Still Have Questions?
-                </h3>
-                <p className="text-xl text-gfg-gray mb-8 font-inter">
-                  Our team is here to help you get started on your tech journey
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-gradient-to-r from-gfg-green to-emerald-600 text-white px-8 py-4 rounded-2xl font-space-grotesk font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                    Ask a Question
-                  </button>
-                  <button className="bg-white text-gfg-green border-2 border-gfg-green px-8 py-4 rounded-2xl font-space-grotesk font-bold text-lg hover:bg-gfg-green hover:text-white transition-all duration-300 hover:scale-105">
-                    Join Our Community
-                  </button>
-                </div>
+          {/* Bottom CTA */}
+          <div className="mt-12 text-center">
+            <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-gray-200">
+              <h3 className="text-lg sm:text-xl font-bold text-gfg-black mb-3 font-space-grotesk">
+                Still Have Questions?
+              </h3>
+              <p className="text-gfg-gray mb-6 font-inter">
+                Our team is here to help you get started on your tech journey
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  to="/community"
+                  className="bg-white text-gfg-green border-2 border-gfg-green px-6 py-3 rounded-lg font-space-grotesk font-semibold hover:bg-gfg-green hover:text-white transition-all duration-200"
+                >
+                  Join Community
+                </Link>
               </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section ref={ctaRef} className="py-24 bg-white">
-        <div className="container mx-auto px-6 text-center">
-          <div ref={addToRefs} className="max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-anton font-black mb-6">
-              <span className="text-gfg-black">READY TO</span>{' '}
-              <span className="text-gfg-green">START?</span>
-            </h2>
-            <p className="text-xl text-gfg-gray mb-10 font-inter text-reveal">
-              Join 500+ students who are already building their tech future with us
-            </p>
-            <div className="flex flex-col sm:flex-row gap-5 justify-center">
-              <button className="bg-gfg-green text-white px-10 py-4 rounded-2xl font-space-grotesk font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-reveal">
-                Join Community Now
-              </button>
             </div>
           </div>
         </div>

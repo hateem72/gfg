@@ -1,3 +1,8 @@
+/* Prevent double scrollbars */
+html, body {
+  overflow-x: hidden;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -598,8 +603,7 @@ a:hover svg {
 .smooth-animation {
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-/
-* ========== AWESOME LOADING ANIMATIONS ========== */
+/* ========== AWESOME LOADING ANIMATIONS ========== */
 
 /* Code Loader Animations */
 @keyframes codeTyping {
@@ -954,8 +958,9 @@ a:hover svg {
 .delay-700 { animation-delay: 7s; }
 .delay-800 { animation-delay: 8s; }
 .delay-900 { animation-delay: 9s; }
-.delay-1000 { animation-delay: 10s; }/* S
-imple loader border utilities */
+.delay-1000 { animation-delay: 10s; }
+
+/* Simple loader border utilities */
 .border-3 {
   border-width: 3px;
 }

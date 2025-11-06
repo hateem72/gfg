@@ -117,23 +117,23 @@ const AboutPage = () => {
       achievement: "15+ Years in Technical Education"
     },
     {
-      name: "Prof. Anshuman Tyagi",
+      name: "Dr. Anshuman Tyagi",
       position: "CP Mentor",
       image: "/anshuman.png",
-      department: "CSE Professor & DSA Trainer",
+      department: "CSE Department",
       expertise: ["Competitive Programming", "Web Technologies", "Project Guidance"],
       achievement: "Industry Expert with 10+ Years Experience"
     },
     {
-      name: "Prof. Arunendra Singh",
+      name: "Prof. (Dr.) Arunendra Singh",
       position: "Development Mentor",
       image: "/arunendra.png",
-      department: "CSE Professor",
+      department: "CSE Department",
       expertise: ["Competitive Programming", "Web Technologies", "Project Guidance"],
       achievement: "Industry Expert with 10+ Years Experience"
     },
     {
-      name: "Prof. Amit Kr. Sinha",
+      name: "Mr. Amit Kr. Sinha",
       position: "Innovation Mentor",
       image: "/amit.png",
       department: "Incubation & Innovation Department",
@@ -141,10 +141,10 @@ const AboutPage = () => {
       achievement: "Industry Expert with 10+ Years Experience"
     },
     {
-      name: "Prof. Hari Mohan Dixit",
+      name: "Mr. Hari Mohan Dixit",
       position: "Event Mentor",
       image: "/hmd.png",
-      department: "CSE Professor",
+      department: "CSE Department",
       expertise: ["Competitive Programming", "Web Technologies", "Project Guidance"],
       achievement: "Industry Expert with 10+ Years Experience"
     },
@@ -158,7 +158,7 @@ const AboutPage = () => {
           <div
             key={i}
             className={`absolute float-element ${i % 3 === 0 ? 'border-gfg-green/10' :
-                i % 3 === 1 ? 'border-gfg-blue/10' : 'border-gfg-yellow/10'
+              i % 3 === 1 ? 'border-gfg-blue/10' : 'border-gfg-yellow/10'
               }`}
             style={{
               width: `${20 + i * 8}px`,
@@ -572,15 +572,15 @@ const AboutPage = () => {
       </section>
 
       {/* Enhanced Final CTA */}
-      <section ref={addToRefs} className="container mx-auto px-6 mt-32 relative z-10">
-        <div className="bg-white rounded-4xl p-20 text-center border-2 border-gfg-light-gray shadow-3xl transform hover:scale-105 transition-all duration-500">
-          <h2 className="text-5xl md:text-6xl font-space-grotesk font-black text-gfg-black mb-8">
+      <section ref={addToRefs} className="container mx-auto px-4 sm:px-6 mt-16 sm:mt-24 lg:mt-32 relative z-10">
+        <div className="bg-white rounded-2xl sm:rounded-3xl lg:rounded-4xl p-6 sm:p-10 md:p-16 lg:p-20 text-center border-2 border-gfg-light-gray shadow-3xl transform hover:scale-105 transition-all duration-500">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-space-grotesk font-black text-gfg-black mb-4 sm:mb-6 lg:mb-8 leading-tight">
             Ready to <span className="text-gfg-green">Launch</span> With Us?
           </h2>
-          <p className="text-2xl text-gfg-gray mb-12 max-w-3xl mx-auto font-inter text-reveal">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gfg-gray mb-8 sm:mb-10 lg:mb-12 max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto font-inter text-reveal leading-relaxed px-2 sm:px-0">
             Be part of the founding community that shapes the future of technology education at Allenhouse Institute of Technology
           </p>
-          <button className="bg-gfg-green text-white px-16 py-6 rounded-3xl font-rajdhani font-black text-xl tracking-wider hover:bg-gfg-dark-green transform hover:scale-110 hover:shadow-2xl transition-all duration-300 shadow-lg">
+          <button className="bg-gfg-green text-white px-6 sm:px-10 md:px-14 lg:px-16 py-3 sm:py-4 md:py-5 lg:py-6 rounded-2xl sm:rounded-3xl font-rajdhani font-black text-sm sm:text-base md:text-lg lg:text-xl tracking-wider hover:bg-gfg-dark-green transform hover:scale-110 hover:shadow-2xl transition-all duration-300 shadow-lg w-full sm:w-auto">
             JOIN THE TECH COMMUNITY
           </button>
         </div>

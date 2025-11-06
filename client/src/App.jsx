@@ -51,7 +51,7 @@ function App() {
 
   return (
     <Router>
-      <div className="App bg-white min-h-screen">
+      <div className="App bg-white">
         <Navbar />
         <ScrollToTop />
         

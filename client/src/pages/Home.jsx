@@ -226,7 +226,7 @@ const LandingPage = () => {
         </div>
 
         {/* Content Container with Perfect Centering */}
-        <div className="relative z-10 w-full flex flex-col items-center justify-center">
+        <div className="relative mt-10  z-10 w-full flex flex-col items-center justify-center">
           {/* Centered Logo Container */}
           <div className="flex justify-center items-center w-full mb-8">
             <div
@@ -236,7 +236,7 @@ const LandingPage = () => {
               <ImageLoader
                 src="/gfg.svg"
                 alt="GeeksForGeeks"
-                className="h-28  md:h-36 mt-24 lg:h-44 w-auto drop-shadow-2xl mx-auto"
+                className="h-28  md:h-36 lg:h-44 w-auto drop-shadow-2xl mx-auto"
                 containerClassName="flex justify-center"
                 loaderType="pulse"
               />

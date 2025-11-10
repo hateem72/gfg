@@ -7,6 +7,7 @@ import Lenis from 'lenis';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollToTopOnMount from './components/ScrollToTopOnMount';
 
 // Pages
 import Home from './pages/Home';
@@ -37,6 +38,9 @@ function App() {
       infinite: false,
     });
 
+    // Store lenis instance globally for access in other components
+    window.lenis = lenis;
+
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -46,6 +50,7 @@ function App() {
 
     return () => {
       lenis.destroy();
+      window.lenis = null;
     };
   }, []);
 
@@ -54,6 +59,7 @@ function App() {
       <div className="App bg-white">
         <Navbar />
         <ScrollToTop />
+        <ScrollToTopOnMount />
         
         <AnimatePresence mode="wait">
           <Routes>

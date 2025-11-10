@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ImageLoader from '../components/ImageLoader';
@@ -8,6 +9,7 @@ if (typeof window !== 'undefined') {
 }
 
 const AboutPage = () => {
+  const navigate = useNavigate();
   const aboutRef = useRef(null);
   const heroRef = useRef(null);
   const missionRef = useRef(null);
@@ -580,7 +582,10 @@ const AboutPage = () => {
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gfg-gray mb-8 sm:mb-10 lg:mb-12 max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto font-inter text-reveal leading-relaxed px-2 sm:px-0">
             Be part of the founding community that shapes the future of technology education at Allenhouse Institute of Technology
           </p>
-          <button className="bg-gfg-green text-white px-6 sm:px-10 md:px-14 lg:px-16 py-3 sm:py-4 md:py-5 lg:py-6 rounded-2xl sm:rounded-3xl font-rajdhani font-black text-sm sm:text-base md:text-lg lg:text-xl tracking-wider hover:bg-gfg-dark-green transform hover:scale-110 hover:shadow-2xl transition-all duration-300 shadow-lg w-full sm:w-auto">
+          <button 
+            onClick={() => navigate('/community')}
+            className="bg-gfg-green text-white px-6 sm:px-10 md:px-14 lg:px-16 py-3 sm:py-4 md:py-5 lg:py-6 rounded-2xl sm:rounded-3xl font-rajdhani font-black text-sm sm:text-base md:text-lg lg:text-xl tracking-wider hover:bg-gfg-dark-green transform hover:scale-110 hover:shadow-2xl transition-all duration-300 shadow-lg w-full sm:w-auto"
+          >
             JOIN THE TECH COMMUNITY
           </button>
         </div>

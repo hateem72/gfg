@@ -275,7 +275,7 @@ const Navbar = () => {
                 className="pt-4 border-t border-white/20"
               >
                 <Link
-                  to="/contact"
+                  to="/community"
                   onClick={() => setIsOpen(false)}
                   className="flex items-center justify-center space-x-2 w-full px-6 py-4 rounded-xl font-semibold text-white transition-all duration-300 whitespace-nowrap"
                   style={{
@@ -286,7 +286,7 @@ const Navbar = () => {
                   }}
                 >
                   <Sparkles size={18} />
-                  <span className="font-inter">Get In Touch</span>
+                  <span className="font-inter">Join Community</span>
                   <ArrowRight size={16} />
                 </Link>
               </motion.div>

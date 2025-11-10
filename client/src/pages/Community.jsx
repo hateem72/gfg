@@ -153,7 +153,7 @@ const Community = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Link
-              to="https://chat.whatsapp.com/your-community-link"
+              to="https://forms.gle/Weetybpw1cDcPuDy9"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative px-8 py-4 bg-gfg-green text-white font-bold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg"
@@ -350,7 +350,7 @@ const Community = () => {
             className="text-center mt-12"
           >
             <Link
-              to="https://chat.whatsapp.com/your-community-link"
+              to="https://forms.gle/Weetybpw1cDcPuDy9"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-3 px-8 py-4 bg-gfg-green text-white font-bold rounded-xl hover:bg-gfg-dark-green transition-all duration-300"

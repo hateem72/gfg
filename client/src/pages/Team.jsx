@@ -21,7 +21,7 @@ const TeamPage = () => {
       post: "Campus Mantri",
       image: "/hateem.png",
       linkedin: "www.linkedin.com/in/hateem-ansari-3377b72a3",
-      instagram: "https://www.instagram.com/p/DP9R0f9D60G/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      instagram: "https://www.instagram.com/hateem_ansari_/",
       batch: "2023-2027",
       department: "Computer Science & Engineering",
       description: "Leading the tech revolution with passion and innovation. Dedicated to creating impactful learning experiences for the community."
@@ -31,7 +31,7 @@ const TeamPage = () => {
         name: "Prakhar Shukla",
         post: "Technical Head",
         image: "/prakhar.png",
-        linkedin: "https://www.linkedin.com/posts/prakhar-shukla-746360319_leetcode-codingconsistency-keepcoding-activity-7337326099690868737-BJTK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAElEcBsBXnk1sl0NJ4-0iXbf2YVDKXKO4eo",
+        linkedin: "https://www.instagram.com/__prakharshukla_",
         instagram: "#",
         batch: "2023-2027"
       },
@@ -40,7 +40,7 @@ const TeamPage = () => {
         post: "Event Head",
         image: "/saniya.png",
         linkedin: "https://www.linkedin.com/posts/saniya-siddiqui-b504b02a9_hacknovate6-runnerup-codelinecrew-activity-7314625266931126272-oadr?utm_source=share&utm_medium=member_desktop&rcm=ACoAAElEcBsBXnk1sl0NJ4-0iXbf2YVDKXKO4eo",
-        instagram: "#",
+        instagram: "https://www.instagram.com/prettysoiree.3/",
         batch: "2023-2027"
       },
       {
@@ -48,7 +48,7 @@ const TeamPage = () => {
         post: "Outreach head",
         image: "/krish.png",
         linkedin: "https://www.linkedin.com/posts/krish-awasthi_icmlcs2025-researchpresentation-mentorship-activity-7358880177554153473-n2-f?utm_source=share&utm_medium=member_desktop&rcm=ACoAAElEcBsBXnk1sl0NJ4-0iXbf2YVDKXKO4eo",
-        instagram: "#",
+        instagram: "https://www.instagram.com/_krishawasthi/",
         batch: "2023-2027"
       },
       {
@@ -56,7 +56,7 @@ const TeamPage = () => {
         post: "Social Media Head",
         image: "/abhay.png",
         linkedin: "https://www.linkedin.com/posts/abhay-kushwaha-a2a1b21b3_googleworkspace-artificialintelligence-ai-activity-7379888036219760640--5Ej?utm_source=share&utm_medium=member_desktop&rcm=ACoAAElEcBsBXnk1sl0NJ4-0iXbf2YVDKXKO4eo",
-        instagram: "#",
+        instagram: "https://www.instagram.com/the.abhay.maurya/",
         batch: "2023-2027"
       },
       {
@@ -64,7 +64,7 @@ const TeamPage = () => {
         post: "Logistics & Resource Lead",
         image: "/amrit.png",
         linkedin: "https://www.linkedin.com/posts/amrit-pal-519122289_sih2024-smartindiahackathon-governmentofindia-activity-7276846696125374464-evn7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAElEcBsBXnk1sl0NJ4-0iXbf2YVDKXKO4eo",
-        instagram: "",
+        instagram: "https://www.instagram.com/amritt_27/",
         batch: "2023-2027"
       }
     ]

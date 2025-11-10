@@ -19,28 +19,22 @@ const Footer = () => {
   const socialLinks = [
     { 
       icon: FaWhatsapp, 
-      href: 'https://chat.whatsapp.com/your-group-link', 
+      href: 'https://forms.gle/Weetybpw1cDcPuDy9', 
       label: 'WhatsApp',
       color: 'hover:text-green-500'
     },
     { 
       icon: FaLinkedin, 
-      href: 'https://linkedin.com/company/gfg-allenhouse', 
+      href: 'www.linkedin.com/in/geeksforgeeks-campus-body-ait-9688a738a', 
       label: 'LinkedIn',
       color: 'hover:text-blue-500'
     },
     { 
       icon: FaInstagram, 
-      href: 'https://instagram.com/geeksforgeeks.ait.kanpur', 
+      href: 'https://www.instagram.com/geeksforgeeks.ait.kanpur/', 
       label: 'Instagram',
       color: 'hover:text-pink-500'
-    },
-    { 
-      icon: FaGithub, 
-      href: 'https://github.com/gfg-allenhouse', 
-      label: 'GitHub',
-      color: 'hover:text-gray-400'
-    },
+    }
   ];
 
   return (

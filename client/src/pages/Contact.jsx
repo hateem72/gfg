@@ -179,7 +179,7 @@ const Connect = () => {
       icon: FaWhatsapp,
       color: 'from-green-500 to-green-600',
       link: 'https://chat.whatsapp.com/your-group-link',
-      members: '<300 Members'
+      members: '>300 Members'
     },
     {
       platform: 'LinkedIn',
@@ -187,7 +187,7 @@ const Connect = () => {
       icon: FaLinkedin,
       color: 'from-blue-600 to-blue-700',
       link: 'www.linkedin.com/in/geeksforgeeks-campus-body-ait-9688a738a',
-      members: '>100 Followers'
+      members: '<100 Followers'
     },
     {
       platform: 'Instagram',
@@ -195,7 +195,7 @@ const Connect = () => {
       icon: FaInstagram,
       color: 'from-pink-500 to-purple-600',
       link: 'https://www.instagram.com/geeksforgeeks.ait.kanpur',
-      members: '>100 Followers'
+      members: '<100 Followers'
     },
   ];
 

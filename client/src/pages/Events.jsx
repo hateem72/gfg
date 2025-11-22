@@ -20,10 +20,10 @@ const EventsPage = () => {
   const eventsData = {
     comingSoon: {
       id: 1,
-      title: "Hackathon",
-      subtitle: "24hr Innovation Competition",
-      description: "Planning a 24hr Offline Hackathon to ignite creativity and real-world problem-solving among tech enthusiasts. Participants will collaborate, code, and compete for exciting rewards and recognition.",
-      date: "Soon",
+      title: "CodeFuse 25",
+      subtitle: "The Ultimate DSA Battle Arena",
+      description: "Join the ultimate Data Structures and Algorithms competition. Two rounds of intense coding challenges with amazing prizes from GeeksforGeeks!",
+      date: "26 & 29 Nov 2025",
       status: "coming-soon",
       glowColor: "bg-gfg-green/20",
       borderColor: "border-gfg-green",
@@ -165,7 +165,7 @@ const EventsPage = () => {
         <div ref={addToRefs} className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-space-grotesk font-black text-gfg-black mb-4 sm:mb-6">
             <span className="text-gfg-yellow">
-              COMING SOON
+              COMING EVENT
             </span>
           </h2>
           <p className="text-lg sm:text-xl text-gfg-gray max-w-xs sm:max-w-xl lg:max-w-2xl mx-auto px-4">
@@ -225,29 +225,22 @@ const EventsPage = () => {
                     <span className="font-rajdhani font-bold text-sm sm:text-lg tracking-widest">COMING SOON</span>
                   </div>
 
-                  <p className="text-lg sm:text-xl lg:text-2xl text-gfg-gray font-inter leading-relaxed mb-4 sm:mb-6 px-2">
+                  <p className="text-base sm:text-lg lg:text-xl text-gfg-gray font-inter leading-relaxed mb-4 sm:mb-6 px-2">
                     {eventsData.comingSoon.description}
                   </p>
 
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-space-grotesk font-bold text-gfg-green mb-6 sm:mb-8">
+                  <div className="text-lg sm:text-xl lg:text-2xl font-space-grotesk font-bold text-gfg-green mb-6 sm:mb-8">
                     {eventsData.comingSoon.date}
                   </div>
-                </div>
 
-                {/* Countdown Placeholder */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 max-w-xs sm:max-w-md mx-auto mb-6 sm:mb-8">
-                  {['DAYS', 'HOURS', 'MINUTES', 'SECONDS'].map((unit) => (
-                    <div key={unit} className="text-center">
-                      <div className="bg-gfg-light-gray rounded-lg sm:rounded-xl p-2 sm:p-4 mb-1 sm:mb-2">
-                        <div className="text-lg sm:text-xl lg:text-2xl font-anton font-black text-gfg-black">--</div>
-                      </div>
-                      <div className="text-xs font-rajdhani font-bold text-gfg-gray tracking-widest">{unit}</div>
-                    </div>
-                  ))}
+                  {/* View Details Button */}
+                  <button
+                    onClick={() => navigate('/events/codefuse-25')}
+                    className="bg-gfg-green hover:bg-gfg-dark-green text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-rajdhani font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  >
+                    VIEW EVENT DETAILS
+                  </button>
                 </div>
-
-                {/* Notify Button */}
-                
               </div>
 
               {/* Corner Accents */}

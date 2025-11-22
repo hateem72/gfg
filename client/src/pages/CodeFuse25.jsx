@@ -7,6 +7,10 @@ const CodeFuse25 = () => {
   const containerRef = useRef(null);
   const [activeTab, setActiveTab] = useState('overview');
   const [showWhatsAppModal, setShowWhatsAppModal] = useState(false);
+  
+  // Countdown states
+  const [onlineCountdown, setOnlineCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [offlineCountdown, setOfflineCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
     // Entrance animation
@@ -14,6 +18,35 @@ const CodeFuse25 = () => {
       { opacity: 0, y: 20 },
       { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }
     );
+  }, []);
+
+  // Countdown timer effect
+  useEffect(() => {
+    const calculateCountdown = (targetDate) => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+      }
+
+      return {
+        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((distance % (1000 * 60)) / 1000)
+      };
+    };
+
+    const onlineEventDate = new Date('2025-11-26T20:00:00').getTime();
+    const offlineEventDate = new Date('2025-11-29T11:00:00').getTime();
+
+    const timer = setInterval(() => {
+      setOnlineCountdown(calculateCountdown(onlineEventDate));
+      setOfflineCountdown(calculateCountdown(offlineEventDate));
+    }, 1000);
+
+    return () => clearInterval(timer);
   }, []);
 
   const handleRegisterClick = (e) => {
@@ -231,6 +264,63 @@ const CodeFuse25 = () => {
                           <div>
                             <div className="font-space-grotesk font-bold text-gfg-black">GeeksforGeeks Campus Body</div>
                             <div className="text-sm text-gfg-gray">Official Partner</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Event Countdowns */}
+                    <div className="space-y-4">
+                      {/* Round 1 Countdown */}
+                      <div className="bg-gradient-to-r from-gfg-blue/10 to-transparent rounded-2xl p-6 border-l-4 border-gfg-blue">
+                        <div className="flex items-center gap-2 mb-4">
+                          <div className="bg-gfg-blue text-white px-3 py-1 rounded-full text-xs font-rajdhani font-bold">ROUND 1</div>
+                          <h4 className="text-lg font-space-grotesk font-bold text-gfg-black">Online MCQs Battle</h4>
+                        </div>
+                        <div className="text-sm text-gfg-gray mb-3">26th November, 2025 • 8:00 PM</div>
+                        <div className="grid grid-cols-4 gap-2">
+                          <div className="bg-white rounded-lg p-3 text-center shadow-sm">
+                            <div className="text-2xl font-anton font-black text-gfg-blue">{onlineCountdown.days}</div>
+                            <div className="text-xs font-rajdhani font-bold text-gfg-gray tracking-widest">DAYS</div>
+                          </div>
+                          <div className="bg-white rounded-lg p-3 text-center shadow-sm">
+                            <div className="text-2xl font-anton font-black text-gfg-blue">{onlineCountdown.hours}</div>
+                            <div className="text-xs font-rajdhani font-bold text-gfg-gray tracking-widest">HRS</div>
+                          </div>
+                          <div className="bg-white rounded-lg p-3 text-center shadow-sm">
+                            <div className="text-2xl font-anton font-black text-gfg-blue">{onlineCountdown.minutes}</div>
+                            <div className="text-xs font-rajdhani font-bold text-gfg-gray tracking-widest">MINS</div>
+                          </div>
+                          <div className="bg-white rounded-lg p-3 text-center shadow-sm">
+                            <div className="text-2xl font-anton font-black text-gfg-blue">{onlineCountdown.seconds}</div>
+                            <div className="text-xs font-rajdhani font-bold text-gfg-gray tracking-widest">SECS</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Round 2 Countdown */}
+                      <div className="bg-gradient-to-r from-gfg-green/10 to-transparent rounded-2xl p-6 border-l-4 border-gfg-green">
+                        <div className="flex items-center gap-2 mb-4">
+                          <div className="bg-gfg-green text-white px-3 py-1 rounded-full text-xs font-rajdhani font-bold">ROUND 2</div>
+                          <h4 className="text-lg font-space-grotesk font-bold text-gfg-black">Offline On-Campus Battle</h4>
+                        </div>
+                        <div className="text-sm text-gfg-gray mb-3">29th November, 2025 • 11:00 AM</div>
+                        <div className="grid grid-cols-4 gap-2">
+                          <div className="bg-white rounded-lg p-3 text-center shadow-sm">
+                            <div className="text-2xl font-anton font-black text-gfg-green">{offlineCountdown.days}</div>
+                            <div className="text-xs font-rajdhani font-bold text-gfg-gray tracking-widest">DAYS</div>
+                          </div>
+                          <div className="bg-white rounded-lg p-3 text-center shadow-sm">
+                            <div className="text-2xl font-anton font-black text-gfg-green">{offlineCountdown.hours}</div>
+                            <div className="text-xs font-rajdhani font-bold text-gfg-gray tracking-widest">HRS</div>
+                          </div>
+                          <div className="bg-white rounded-lg p-3 text-center shadow-sm">
+                            <div className="text-2xl font-anton font-black text-gfg-green">{offlineCountdown.minutes}</div>
+                            <div className="text-xs font-rajdhani font-bold text-gfg-gray tracking-widest">MINS</div>
+                          </div>
+                          <div className="bg-white rounded-lg p-3 text-center shadow-sm">
+                            <div className="text-2xl font-anton font-black text-gfg-green">{offlineCountdown.seconds}</div>
+                            <div className="text-xs font-rajdhani font-bold text-gfg-gray tracking-widest">SECS</div>
                           </div>
                         </div>
                       </div>

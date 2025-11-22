@@ -175,7 +175,10 @@ const EventsPage = () => {
 
         {/* Coming Soon Card */}
         <div ref={comingSoonRef} className="max-w-xs sm:max-w-2xl lg:max-w-4xl mx-auto">
-          <div className="group relative">
+          <div 
+            className="group relative cursor-pointer"
+            onClick={() => navigate('/events/codefuse-25')}
+          >
             {/* Outer Glow */}
             <div className="absolute -inset-4 sm:-inset-6 lg:-inset-8 bg-gfg-green/20 rounded-2xl sm:rounded-3xl lg:rounded-4xl blur-2xl sm:blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-1000"></div>
 
